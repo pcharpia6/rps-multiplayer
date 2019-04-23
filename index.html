@@ -11,28 +11,74 @@
     integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
     crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>RPS Multiplayer</title>
 </head>
 <body>
-        <div class="jumbotron row">
-            <div class="col-md-10">
-                <h1 class="display-4 login-resize">Rock, Paper, Scissors...</h1>
-                <p class="lead login-remove">You can actually have an opponent with this multiplayer game!</p>
-            </div>
-            <div class="col-md-2">
-                <a class="btn btn-primary btn-lg" id="login" href="#" role="button">Login</a>
-            </div>
+    <div class="jumbotron row">
+        <div class="col-md-10">
+            <h1 class="display-4 login-resize">Rock, Paper, Scissors...</h1>
+            <p class="lead login-remove">You can actually have an opponent with this multiplayer game!</p>
         </div>
-            <div class="row px-md-5 justify-content-between" id="main">
-                <div class="col-md-6 bg-dark text-light" id="active-display">
-                    <h5>Display Me!</h5>
-                </div>
-                <div class="col-md-2 bg-dark text-light" id="games-list"> 
-                    <h5>Join a game!</h5>
-                </div>
-                <div class="col-md-3 bg-dark text-light" id="chat">
-                    <h5>Join in the chat!</h5>
-                </div>
-            </div>
+        <div class="col-md-2">
+                <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">Launch Modal Register Form</a>
+        </div>
+    </div>
+    <div class="row px-md-5 justify-content-between" id="main">
+        <div class="col-md-6 bg-dark text-light" id="active-display">
+            <h5>Display Me!</h5>
+        </div>
+        <div class="col-md-2 bg-dark text-light" id="games-list"> 
+            <h5>Join a game!</h5>
+        </div>
+        <div class="col-md-3 bg-dark text-light" id="chat">
+            <h5>Join in the chat!</h5>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="orangeForm-name entry-displayname" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-name">Display Name</label>
+        </div>
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="email" id="orangeForm-email entry-email" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-email">Your email</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas fa-lock prefix grey-text"></i>
+          <input type="password" id="orangeForm-pass entry-password" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-pass">Your password</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-deep-orange">Sign up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">Launch
+    Modal Register Form</a>
+</div>
+
+<script src="assets/javascript/chat.js"></script>
+<script src="assets/javascript/session.js"></script>
+<script src="assets/javascript/game.js"></script>
 </body>
 </html>
