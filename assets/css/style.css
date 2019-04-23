@@ -1,4 +1,14 @@
 .jumbotron {
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+#main {
+    margin-top: 10px;
+    height: 75vh;
+}
+
+h5 {
+    padding: 15px;
 }
